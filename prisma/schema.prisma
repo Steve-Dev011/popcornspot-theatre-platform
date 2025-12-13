@@ -6,3 +6,14 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model UserAccount {
+  id             String   @id @default(uuid())
+  username       String   @db.VarChar(36)
+  email          String   @db.VarChar(255)
+  displayName    String   @map("display_name") @db.VarChar(36)
+  password       String   @db.Char(60)
+  created_on     DateTime @default(now()) @db.Timestamptz()
+  last_update_on DateTime @default(now()) @updatedAt @db.Timestamptz()
+  last_login_on  DateTime @default(now()) @db.Timestamptz()
+}
