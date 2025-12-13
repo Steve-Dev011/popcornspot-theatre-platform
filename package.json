@@ -1,0 +1,29 @@
+{
+  "name": "popcornspot-theatre-platform",
+  "version": "1.0.0",
+  "description": "Movie theatre platform.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Steve-Dev011/popcornspot-theatre-platform.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Steve",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "dotenv -e .env.development -- nodemon index.js",
+    "start": "dotenv -e .env.production -- node index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11",
+    "prisma": "^7.1.0"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.1.0",
+    "dotenv": "^17.2.3",
+    "dotenv-cli": "^11.0.0",
+    "express": "^5.2.1",
+    "pg": "^8.16.3",
+    "winston": "^3.19.0"
+  }
+}
